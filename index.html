@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Мої роботи</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://live.warthunder.com/dl/9uXRjwtkxK714yQs/');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: transparent; /* Залишаємо прозорим */
+      color: white;
+      padding: 30px 10px;
+    }
+
+    header img {
+      max-width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-top: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    main {
+      padding: 40px 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    li {
+      margin: 20px 0;
+      display: flex; /* Для вирівнювання емодзі та тексту */
+      align-items: center; /* Вирівнювання по центру */
+      justify-content: center; /* Центрування вмісту li */
+    }
+
+    li .emoji {
+      margin-right: 10px; /* Відступ між емодзі та текстом */
+      font-size: 24px; /* Розмір емодзі */
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      color: white; /* Текст гіперпосилань білий */
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    a:hover {
+      background-color: black; /* Змінено на чорний */
+      color: white;
+    }
+
+    .video-container {
+      margin-top: 40px;
+      margin-bottom: 20px; /* Додано відступ знизу */
+      text-align: center;
+    }
+
+    .video-container iframe {
+        border-radius: 12px; /* Закруглені кути для плеєра */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Тінь для плеєра */
+    }
+
+
+    footer {
+      margin-top: 40px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    </header>
+
+  <main>
+    <ul id="work-list">
+      <li><a href="1.html"> оцінки</a></li>
+      <li><a href="2.html"> Вхід (логін та пароль)</a></li>
+      <li><a href="3.html"> Піднесення до степеня</a></li>
+      <li><a href="4.html"> Перевірка на спам</a></li>
+      <li><a href="5.html"> Обчислення факторіала</a></li>
+      <li><a href="6.html">Банк "lake"</a></li>
+      <li><a href="8.html"> Таблиця множення</a></li>
+      <li><a href="9.html">Рандомні кола</a></li>
+      <li><a href="10.html"> Компліменти</a></li>
+    </ul>
+
+    <div class="video-container">
+      <h3>Музика War Thunder: Головна Тема</h3>
+      <iframe width="560" height="315" src="https://youtu.be/Ri3pYRQWZ8M?si=i4YrAEbg_dhNOdCr" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Мої JavaScript роботи
+  </footer>
+
+  <script>
+    const emojis = ['✨', '⭐', '🚀', '💡', '🎉', '🌟', '🌈', '🔥', '💻', '✅', '📚', '⚙️', '📊', '💬', '🔒', '🔢', '🧪'];
+    const listItems = document.querySelectorAll('#work-list li');
+
+    listItems.forEach(item => {
+      const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+      const emojiSpan = document.createElement('span');
+      emojiSpan.className = 'emoji';
+      emojiSpan.textContent = randomEmoji;
+      item.prepend(emojiSpan);
+    });
+  </script>
+</body>
+</html>
