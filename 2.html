@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Вхід</title>
+</head>
+<body>
+  <script>
+    let login = prompt("Введіть логін:");
+
+    if (login === null) {
+      alert("Вхід скасований");
+    } else if (login === "User") {
+      let password = prompt("Введіть пароль:");
+      
+      if (password === null) {
+        alert("Вхід скасований");
+      } else if (password === "password") {
+        alert("Ласкаво просимо!");
+      } else {
+        alert("Пароль невірний!");
+      }
+
+    } else {
+      alert("Користувач невизначений");
+    }
+  </script>
+</body>
+</html>

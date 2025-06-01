@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Перевірка на спам</title>
+</head>
+<body>
+  <h2>Перевірка повідомлення на спам</h2>
+  <textarea id="message" rows="5" cols="40" placeholder="Введіть текст повідомлення..."></textarea><br><br>
+  <button onclick="checkSpam()">Перевірити</button>
+
+  <p id="result"></p>
+
+  <script>
+    function containsSpam(text) {
+      const lowerText = text.toLowerCase();
+      return lowerText.includes("безкоштовно") && lowerText.includes("гарантія");
+    }
+
+    function checkSpam() {
+      const message = document.getElementById("message").value;
+      const isSpam = containsSpam(message);
+      const result = document.getElementById("result");
+
+      if (isSpam) {
+        result.textContent = "❌ Повідомлення виглядає як спам!";
+      } else {
+        result.textContent = "✅ Повідомлення не містить спаму.";
+      }
+    }
+  </script>
+</body>
+</html>

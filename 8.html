@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Таблиця множення</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #f0f8ff, #e0f7fa);
+      font-family: 'Georgia', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    input[type="number"] {
+      padding: 8px;
+      width: 60px;
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .output {
+      margin-top: 20px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Таблиця множення</h1>
+    <label for="number">Введіть число:</label><br>
+    <input type="number" id="number" value="1"><br>
+    <button onclick="generateTable()">Згенерувати</button>
+    <div class="output" id="output"></div>
+  </div>
+
+  <script>
+    function generateTable() {
+      const num = Number(document.getElementById('number').value);
+      const output = document.getElementById('output');
+      output.innerHTML = '';
+
+      for (let i = 1; i <= 10; i++) {
+        output.innerHTML += `${num} × ${i} = ${num * i}<br>`;
+      }
+    }
+
+    // Автозапуск при завантаженні
+    window.onload = generateTable;
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Оцінка учня</title>
+</head>
+<body>
+  <script>
+    let grade = prompt("Введіть оцінку (0-12):");
+    grade = Number(grade); // Перетворення в число
+
+    let result;
+
+    switch (grade) {
+      case 12:
+        result = "Відмінно";
+        break;
+      case 11:
+      case 10:
+        result = "Дуже добре";
+        break;
+      case 9:
+      case 8:
+        result = "Добре";
+        break;
+      case 7:
+      case 6:
+        result = "Задовільно";
+        break;
+      case 5:
+      case 4:
+        result = "Слабко";
+        break;
+      case 3:
+      case 2:
+      case 1:
+        result = "Дуже слабко";
+        break;
+      case 0:
+        result = "Незадовільно";
+        break;
+      default:
+        result = "Такої оцінки не існує";
+    }
+
+    alert(result);
+  </script>
+</body>
+</html>
